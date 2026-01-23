@@ -1,0 +1,9 @@
+export { Login } from './Login';
+export { Dashboard } from './Dashboard';
+export { Bookings } from './Bookings';
+export { Vehicles } from './Vehicles';
+export { Employees } from './Employees';
+export { Visitors } from './Visitors';
+export { Gates } from './Gates';
+export { Exceptions } from './Exceptions';
+export { Reports } from './Reports';
