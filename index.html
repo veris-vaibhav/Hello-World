@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Keypad</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Virtual Keypad</h1>
+    </header>
+
+    <main>
+      <div class="editor-section">
+        <div class="typebox-wrapper">
+          <textarea id="typebox" placeholder="Start typing using the keypad below..."></textarea>
+          <div class="typebox-actions">
+            <button id="clear-btn" class="btn btn-secondary">Clear</button>
+            <button id="save-btn" class="btn btn-primary">Save Article</button>
+          </div>
+        </div>
+
+        <div class="keypad" id="keypad">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <aside class="history-section">
+        <h2>Recent Articles <span id="article-count" class="count-badge">0</span></h2>
+        <ul id="article-list" class="article-list">
+          <li class="empty-state">No articles saved yet.</li>
+        </ul>
+      </aside>
+    </main>
+  </div>
+
+  <!-- Article preview modal -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modal-title"></h3>
+        <button id="modal-close" class="modal-close">&times;</button>
+      </div>
+      <pre id="modal-body" class="modal-body"></pre>
+      <div class="modal-footer">
+        <button id="modal-restore" class="btn btn-primary">Restore to Editor</button>
+        <button id="modal-delete" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
